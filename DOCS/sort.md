@@ -28,7 +28,7 @@ Functions
             bool: true if the string looks like a complex password
 
     
-`idEmailCol(data: list, threshhold: float = 0.85) ‑> int`
+`idEmailCol(data: list[list[str]], threshhold: float = 0.85) ‑> int`
 :   Do some heuristics on the data and return the column index that is
     likely to be the email column
     
@@ -41,7 +41,7 @@ Functions
             int: the column index for emails
 
     
-`idHashCol(data: list, threshhold: float = 0.85) ‑> int`
+`idHashCol(data: list[list[str]], threshhold: float = 0.85) ‑> int`
 :   Do some heuristics on the data and return the column index that is
     likely to be the hash column
     
@@ -54,7 +54,7 @@ Functions
             int: the column index for the hashes
 
     
-`idPwdCol(data: list, threshhold: float = 0.7) ‑> int`
+`idPwdCol(data: list[list[str]], threshhold: float = 0.7) ‑> int`
 :   Do some heuristics on the data and return the column index that is
     likely to be the password column
     
@@ -77,7 +77,7 @@ Functions
             bool: true if known
 
     
-`process(lines: list, filename: str)`
+`process(lines: list[str], filename: str)`
 :   Process a file
     
     Args:
@@ -92,14 +92,14 @@ Functions
             filename (str): relative file path of dump
 
     
-`returnArr(lines: list, delim: Optional[str] = None) ‑> list`
+`returnArr(lines: list[str], delim: typing.Optional[str] = None) ‑> list`
 :   Convert the array of raw data (lines) to a 2d array representing a table
     
     Args:
             lines (string[]): array of plaintext lines (raw data)
 
     
-`returnDelim(lines: list)`
+`returnDelim(lines: list[str])`
 :   Return the most likely delimeter from some input data
     
     Args:

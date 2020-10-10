@@ -2,6 +2,8 @@
 
 Sort dumps into Email, hash, password, source
 """
+from __future__ import annotations
+
 import typing
 import csv
 from re import match, search as regexSearch
